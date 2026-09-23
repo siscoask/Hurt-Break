@@ -1,0 +1,8 @@
+{
+  "name": "HurtBreak",
+  "description": "Know what was yours. Let go of what wasn't. A premium self-reflection and clarity web app for heartbreak and emotional accountability.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
