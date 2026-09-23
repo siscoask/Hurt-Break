@@ -3,7 +3,7 @@ import { Logo } from './Logo';
 import { ExternalLink, Mail, MessageSquare, Shield, Heart } from 'lucide-react';
 
 export const AboutView: React.FC = () => {
-  const WHATSAPP_NUMBER = '0812819751';
+  const WHATSAPP_NUMBER = '08128197651';
   const cleanPhone = WHATSAPP_NUMBER.startsWith('0')
     ? '234' + WHATSAPP_NUMBER.substring(1)
     : WHATSAPP_NUMBER;

@@ -9,7 +9,7 @@ export const TalkToUsView: React.FC = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const WHATSAPP_NUMBER = '0812819751';
+  const WHATSAPP_NUMBER = '08128197651';
   // International format for wa.me URL (often Nigeria +234 812 819 751 or direct clean digits)
   // To ensure maximum device compatibility:
   const cleanPhone = WHATSAPP_NUMBER.startsWith('0')
