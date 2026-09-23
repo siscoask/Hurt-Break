@@ -15,6 +15,7 @@ import { DontTextView } from './components/DontTextView';
 import { SavedView } from './components/SavedView';
 import { TalkToUsView } from './components/TalkToUsView';
 import { AboutView } from './components/AboutView';
+import { OfflineIndicator } from './components/OfflineIndicator';
 
 export default function App() {
   const [currentTab, setCurrentTab] = useState<NavTab>('home');
@@ -78,6 +79,9 @@ export default function App() {
 
       {/* Safety & Crisis Helpline Support */}
       <CrisisModal isOpen={isCrisisOpen} onClose={() => setIsCrisisOpen(false)} />
+
+      {/* Connectivity & Offline Mode Banner */}
+      <OfflineIndicator />
 
       {/* Global Navigation (Sidebar on Desktop/Tablet, Bottom Bar on Mobile) */}
       <Navigation

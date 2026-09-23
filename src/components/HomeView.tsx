@@ -15,6 +15,7 @@ import { NavTab, DailyReminder } from '../types';
 import { getTodayDrop } from '../data/dailyDrops';
 import { storage } from '../services/storage';
 import { ButIDidTool } from './ButIDidTool';
+import { PWAInstallButton } from './PWAInstallButton';
 
 interface HomeViewProps {
   onNavigate: (tab: NavTab, params?: { promptCategory?: string }) => void;
@@ -238,6 +239,11 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
             <p className="text-xs text-emerald-400 mt-2">Copied reflection to clipboard.</p>
           )}
         </div>
+      </section>
+
+      {/* PWA INSTALL BANNER (Hides automatically if already running as installed app) */}
+      <section>
+        <PWAInstallButton variant="card" />
       </section>
 
       {/* "BUT I DID..." SECTION */}

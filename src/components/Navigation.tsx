@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import { NavTab, ThemeMode } from '../types';
 import { Logo } from './Logo';
+import { PWAInstallButton } from './PWAInstallButton';
 
 interface NavigationProps {
   currentTab: NavTab;
@@ -157,8 +158,10 @@ export const Navigation: React.FC<NavigationProps> = ({
           </div>
         </div>
 
-        {/* Sidebar Footer: Theme & Late Night Quote */}
+        {/* Sidebar Footer: PWA Install, Theme & Late Night Quote */}
         <div className="p-4 border-t border-[var(--border-subtle)] bg-[var(--bg-card)]/50 space-y-3">
+          <PWAInstallButton variant="nav" />
+
           <div className="flex items-center justify-between text-xs text-[var(--text-secondary)]">
             <span>Theme: <strong className="capitalize text-[var(--text-primary)]">{theme}</strong></span>
             <button
@@ -189,6 +192,8 @@ export const Navigation: React.FC<NavigationProps> = ({
         <Logo size="sm" onClick={() => onSelectTab('home')} />
         
         <div className="flex items-center gap-2">
+          <PWAInstallButton variant="inline" />
+
           <button
             onClick={cycleTheme}
             className="p-2 rounded-lg border border-[var(--border-subtle)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] cursor-pointer"
